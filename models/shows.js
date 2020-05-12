@@ -9,4 +9,4 @@ var show = {
     },
 }
 
-module.exports = orm;
+module.exports = show;
