@@ -7,6 +7,12 @@ var show = {
         cb(res);
       });
     },
+    update: function(objColVals, condition, cb) {
+      orm.update("shows", objColVals, condition, function(res) {
+        cb(res);
+      });
+    },
+  
 }
 
 module.exports = show;
