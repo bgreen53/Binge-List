@@ -1,8 +1,9 @@
 <div class="container">
   <!--Jumbotron-->
-  <div class="jumbotron text-center bg-primary text-white">
-    <h1 class="display-4" id="app-title">Binge List <img src=""></h1>
-    <p class="lead">All the shows that need to be binged</p>
+  <div class="jumbotron text-center bg-dark text-white">
+    <img src="https://cdn.clipart.email/4f1ccad446e29b034f00fbce97550602_modern-tv-clipart-png_9502-6181.png" width="60%" alt="Modern Television Clipart Png" id="logo">
+    <h1 class="display-4 logo-text" id="app-title">Binge List </h1>
+    <p class="lead logo-subtext">All the shows that need to be binged</p>
   </div>
 
   <div class="row">
@@ -17,7 +18,7 @@
     <div class="col-lg-6">
       {{#each shows}}
       {{#unless isbinged}}
-      {{> shows/show-block isbinged=true}}
+      {{> shows/show-block isbinged=1}}
       {{/unless}}
 
       {{/each}}
@@ -26,7 +27,7 @@
      <div class="col-lg-6">
       {{#each shows}}
       {{#if isbinged}}
-      {{> shows/show-block isbinged=true}}
+      {{> shows/show-block isbinged=0}}
       {{/if}}
 
       {{/each}}

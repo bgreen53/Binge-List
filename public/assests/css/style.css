@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+  }
+
+ 
+
+
+  
+  .bg {
+    /* The image used */
+    background-image: url("../images/services.png");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .jumbotron {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0%;
+  }
+
+  .logo-text{
+    position: relative;
+    top: -300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo-subtext{
+    position: relative;
+    top: -300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #logo{
+      padding: 0px,0px,0px,0px;
+      margin: 0px,0px,0px,0px;
+      offset: 0px,0px,0px,0px;
+  }

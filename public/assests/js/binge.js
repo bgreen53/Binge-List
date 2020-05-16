@@ -10,7 +10,7 @@ $(function() {
       // Send the PUT request.
       $.ajax("/api/shows/" + id, {
         type: "PUT",
-        data: newBinge
+        data: newIsBinged
       }).then(
         function() {
           console.log("changed isbinged to", newIsBinged);
@@ -42,19 +42,19 @@ $(function() {
     //   );
     // });
   
-    // $(".delete-cat").on("click", function(event) {
-    //   var id = $(this).data("id");
+    $(".delete-show").on("click", function(event) {
+      var id = $(this).data("id");
   
-    //   // Send the DELETE request.
-    //   $.ajax("/api/cats/" + id, {
-    //     type: "DELETE"
-    //   }).then(
-    //     function() {
-    //       console.log("deleted cat", id);
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
+      // Send the DELETE request.
+      $.ajax("/api/shows/" + id, {
+        type: "DELETE"
+      }).then(
+        function() {
+          console.log("deleted show", id);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
   });
   
