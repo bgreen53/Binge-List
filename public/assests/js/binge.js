@@ -20,27 +20,26 @@ $(function() {
       );
     });
   
-    // $(".create-form").on("submit", function(event) {
-    //   // Make sure to preventDefault on a submit event.
-    //   event.preventDefault();
+    $(".create-form").on("submit", function(event) {
+      // Make sure to preventDefault on a submit event.
+      event.preventDefault();
   
-    //   var newCat = {
-    //     name: $("#ca").val().trim(),
-    //     sleepy: $("[name=sleepy]:checked").val().trim()
-    //   };
+      var newShow = {
+        title: $("#showAdd").val().trim(),
+      };
   
-    //   // Send the POST request.
-    //   $.ajax("/api/cats", {
-    //     type: "POST",
-    //     data: newCat
-    //   }).then(
-    //     function() {
-    //       console.log("created new cat");
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
+      // Send the POST request.
+      $.ajax("/api/shows", {
+        type: "POST",
+        data: newShow
+      }).then(
+        function() {
+          console.log("added new show");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
   
     $(".delete-show").on("click", function(event) {
       var id = $(this).data("id");

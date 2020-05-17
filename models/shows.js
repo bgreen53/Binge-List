@@ -12,6 +12,17 @@ var show = {
         cb(res);
       });
     },
+    delete: function(condition, cb) {
+      orm.delete("shows", condition, function(res) {
+        cb(res);
+      });
+    },
+    create: function(cols, vals, cb) {
+      orm.create("shows", cols, vals, function(res) {
+        cb(res);
+      });
+    }
+  
   
 }
 
