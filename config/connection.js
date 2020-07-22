@@ -16,4 +16,14 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
+connection.on('error', function(err) {
+  console.log('db error', err);
+  if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
+    connection.connect();                         
+  } else {                                      
+    throw err;                                 
+  }
+});
+
+
 module.exports = connection;
